@@ -1,22 +1,35 @@
-//complete this code
 class Animal {
-	constructor(species){
-		this.species = species;
-	}
-	purr(){
-		console.log("purr");
-	}
-	bark(){
-		console.log("woof");
-	}
-}
+  constructor(species) {
+    this._species = species;
+  }
 
-class Dog extends Animal {
-	bark();
+  get species() {
+    return this._species;
+  }
+
+  makeSound() {
+    // To be overridden by subclasses
+  }
 }
 
 class Cat extends Animal {
-	purr();
+  purr() {
+    console.log("purr");
+  }
+
+  makeSound() {
+    this.purr();
+  }
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log("woof");
+  }
+
+  makeSound() {
+    this.bark();
+  }
 }
 
 // Do not change the code below this line
