@@ -9,11 +9,11 @@ class Animal {
 }
 
 class Dog extends Animal {
-	makeSound("woof");
+	this.makeSound("woof");
 }
 
 class Cat extends Animal {
-	makeSound("purr");
+	this.makeSound("purr");
 }
 
 // Do not change the code below this line
